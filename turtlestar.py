@@ -1,5 +1,5 @@
 #-------------------------------------------------------------------------------
-# Name:        module1
+# Name:        Turtle Star
 # Purpose:
 #
 # Author:      David
@@ -10,22 +10,16 @@
 #-------------------------------------------------------------------------------
 
 import turtle
+
+angle = 2 * 360 / 5
+
 wn = turtle.Screen()
-pirate = turtle.Turtle()
-pirate.pensize(3)
 
+penny = turtle.Turtle()
 
-angles = [160, -43, 270, -97, -43, 200, -940, 17, -86]
-
-heading = 0
-
-for a in angles:
-    pirate.forward(100)
-    pirate.left(a)
-    heading = heading + a
-    print("the pirate's current heading is", heading%360)
-
-pirate.forward(100)
+for i in range(5):
+    penny.forward(50)
+    penny.right(angle)
 
 wn.mainloop()
 

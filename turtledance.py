@@ -1,5 +1,5 @@
 #-------------------------------------------------------------------------------
-# Name:        module1
+# Name:        turtledance
 # Purpose:
 #
 # Author:      David
@@ -11,21 +11,13 @@
 
 import turtle
 wn = turtle.Screen()
-pirate = turtle.Turtle()
-pirate.pensize(3)
-
-
-angles = [160, -43, 270, -97, -43, 200, -940, 17, -86]
-
-heading = 0
-
-for a in angles:
-    pirate.forward(100)
-    pirate.left(a)
-    heading = heading + a
-    print("the pirate's current heading is", heading%360)
-
-pirate.forward(100)
-
+tess = turtle.Turtle()
+tess.right(90)
+tess.left(3600)
+tess.right(-90)
+tess.speed(10)
+tess.left(3600)
+tess.speed(0)
+tess.left(3645)
+tess.forward(-100)
 wn.mainloop()
-
