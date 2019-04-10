@@ -14,7 +14,7 @@ def find_hypot(a, b):
     c = (a**2 + b**2)**0.5
     return c
 
-def is_approximately_equal_to(x,y):
+def approx_equal(x,y):
     """tells you that two numbers are approximately equal if the are equivalent to 5 dp"""
     if abs(x-y) < 0.00001:
         return True
@@ -25,7 +25,7 @@ def is_rightangled(i,j,k):
     l = find_hypot(i,j)         #calculate what you should expect the hypotenuse to be if k is the longest side
     m = find_hypot(j,k)         #calculate what you should expect the hypotenuse to be if i is the longest side
     n = find_hypot(i,k)         #calculate what you should expect the hypotenuse to be if j is the longest side
-    if is_approximately_equal_to(k,l) or is_approximately_equal_to(i,m) or is_approximately_equal_to(j,n): #compare expected and provided hypotenuses
+    if approx_equal(k,l) or approx_equal(i,m) or approx_equal(j,n): #compare expected and provided hypotenuses
         return True
     else:
         return False
